@@ -15,6 +15,8 @@
 		D27F85831F4FF88600916135 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D27F85811F4FF88600916135 /* LaunchScreen.storyboard */; };
 		D27F858E1F4FF88600916135 /* CGContextRefDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F858D1F4FF88600916135 /* CGContextRefDemoTests.m */; };
 		D27F85991F4FF88600916135 /* CGContextRefDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F85981F4FF88600916135 /* CGContextRefDemoUITests.m */; };
+		D27F85A81F4FF8AC00916135 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F85A71F4FF8AC00916135 /* CustomView.m */; };
+		D27F85AA1F511D5200916135 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = D27F85A91F511D5100916135 /* apple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		D27F85941F4FF88600916135 /* CGContextRefDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGContextRefDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27F85981F4FF88600916135 /* CGContextRefDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGContextRefDemoUITests.m; sourceTree = "<group>"; };
 		D27F859A1F4FF88600916135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D27F85A61F4FF8AC00916135 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		D27F85A71F4FF8AC00916135 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		D27F85A91F511D5100916135 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				D27F85771F4FF88600916135 /* AppDelegate.m */,
 				D27F85791F4FF88600916135 /* ViewController.h */,
 				D27F857A1F4FF88600916135 /* ViewController.m */,
+				D27F85A61F4FF8AC00916135 /* CustomView.h */,
+				D27F85A71F4FF8AC00916135 /* CustomView.m */,
+				D27F85A91F511D5100916135 /* apple.png */,
 				D27F857C1F4FF88600916135 /* Main.storyboard */,
 				D27F857F1F4FF88600916135 /* Assets.xcassets */,
 				D27F85811F4FF88600916135 /* LaunchScreen.storyboard */,
@@ -249,6 +257,7 @@
 				D27F85831F4FF88600916135 /* LaunchScreen.storyboard in Resources */,
 				D27F85801F4FF88600916135 /* Assets.xcassets in Resources */,
 				D27F857E1F4FF88600916135 /* Main.storyboard in Resources */,
+				D27F85AA1F511D5200916135 /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D27F857B1F4FF88600916135 /* ViewController.m in Sources */,
+				D27F85A81F4FF8AC00916135 /* CustomView.m in Sources */,
 				D27F85781F4FF88600916135 /* AppDelegate.m in Sources */,
 				D27F85751F4FF88600916135 /* main.m in Sources */,
 			);
