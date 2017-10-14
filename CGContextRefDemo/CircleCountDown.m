@@ -34,7 +34,7 @@
     _timer = [NSTimer scheduledTimerWithTimeInterval:.1 repeats:YES block:^(NSTimer * _Nonnull timer)
   {
       _count++;
-      [self setNeedsDisplay];//立即绘制内容。静态绘制一次成型，这句话写不写都行；但是动态绘制需要及时更新UI，必须写这句话
+      [self setNeedsDisplay];//立即绘制内容(会立刻调用drawRect方法)。静态绘制一次成型，这句话写不写都行；但是动态绘制需要及时更新UI，必须写这句话
       
       if (_count == 50)
       {
