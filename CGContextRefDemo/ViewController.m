@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomView.h"
+#import "CircleCountDown.h"
 
 @interface ViewController ()
 
@@ -15,20 +16,23 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
+    //静态绘制
     CustomView *customView = [[CustomView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:customView];
+    
+    //动态绘制
+    CircleCountDown *cView = [[CircleCountDown alloc] initWithFrame:CGRectMake(self.view.frame.size.width -100, self.view.frame.size.height -100, 100, 100)];
+    [cView time];
+    [self.view addSubview:cView];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 @end

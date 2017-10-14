@@ -23,7 +23,7 @@
     return self;
 }
 
-// 覆盖drawRect方法，你可以在此自定义绘画和动画
+// 覆盖drawRect方法，你可以在此自定义绘画和动画(绘制的内容必须写在这里，不能写在初始化方法中，否则控制台会报错)
 - (void)drawRect:(CGRect)rect
 {
     [self T1];

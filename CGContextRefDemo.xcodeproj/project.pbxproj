@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D25557591F91B1A30039A7F5 /* CircleCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = D25557581F91B1A30039A7F5 /* CircleCountDown.m */; };
 		D27F85751F4FF88600916135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F85741F4FF88600916135 /* main.m */; };
 		D27F85781F4FF88600916135 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F85771F4FF88600916135 /* AppDelegate.m */; };
 		D27F857B1F4FF88600916135 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F857A1F4FF88600916135 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D25557571F91B1A30039A7F5 /* CircleCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCountDown.h; sourceTree = "<group>"; };
+		D25557581F91B1A30039A7F5 /* CircleCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCountDown.m; sourceTree = "<group>"; };
 		D27F85701F4FF88600916135 /* CGContextRefDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGContextRefDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27F85741F4FF88600916135 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D27F85761F4FF88600916135 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D25557551F91B1720039A7F5 /* 静态绘制 */ = {
+			isa = PBXGroup;
+			children = (
+				D27F85A61F4FF8AC00916135 /* CustomView.h */,
+				D27F85A71F4FF8AC00916135 /* CustomView.m */,
+			);
+			name = "静态绘制";
+			sourceTree = "<group>";
+		};
+		D25557561F91B1800039A7F5 /* 动态绘制 */ = {
+			isa = PBXGroup;
+			children = (
+				D25557571F91B1A30039A7F5 /* CircleCountDown.h */,
+				D25557581F91B1A30039A7F5 /* CircleCountDown.m */,
+			);
+			name = "动态绘制";
+			sourceTree = "<group>";
+		};
 		D27F85671F4FF88500916135 = {
 			isa = PBXGroup;
 			children = (
@@ -106,17 +127,10 @@
 		D27F85721F4FF88600916135 /* CGContextRefDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D27F85761F4FF88600916135 /* AppDelegate.h */,
-				D27F85771F4FF88600916135 /* AppDelegate.m */,
 				D27F85791F4FF88600916135 /* ViewController.h */,
 				D27F857A1F4FF88600916135 /* ViewController.m */,
-				D27F85A61F4FF8AC00916135 /* CustomView.h */,
-				D27F85A71F4FF8AC00916135 /* CustomView.m */,
-				D27F85A91F511D5100916135 /* apple.png */,
-				D27F857C1F4FF88600916135 /* Main.storyboard */,
-				D27F857F1F4FF88600916135 /* Assets.xcassets */,
-				D27F85811F4FF88600916135 /* LaunchScreen.storyboard */,
-				D27F85841F4FF88600916135 /* Info.plist */,
+				D25557551F91B1720039A7F5 /* 静态绘制 */,
+				D25557561F91B1800039A7F5 /* 动态绘制 */,
 				D27F85731F4FF88600916135 /* Supporting Files */,
 			);
 			path = CGContextRefDemo;
@@ -125,6 +139,13 @@
 		D27F85731F4FF88600916135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D27F85A91F511D5100916135 /* apple.png */,
+				D27F85761F4FF88600916135 /* AppDelegate.h */,
+				D27F85771F4FF88600916135 /* AppDelegate.m */,
+				D27F857C1F4FF88600916135 /* Main.storyboard */,
+				D27F857F1F4FF88600916135 /* Assets.xcassets */,
+				D27F85811F4FF88600916135 /* LaunchScreen.storyboard */,
+				D27F85841F4FF88600916135 /* Info.plist */,
 				D27F85741F4FF88600916135 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -286,6 +307,7 @@
 				D27F85A81F4FF8AC00916135 /* CustomView.m in Sources */,
 				D27F85781F4FF88600916135 /* AppDelegate.m in Sources */,
 				D27F85751F4FF88600916135 /* main.m in Sources */,
+				D25557591F91B1A30039A7F5 /* CircleCountDown.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +539,7 @@
 				D27F859F1F4FF88600916135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D27F85A01F4FF88600916135 /* Build configuration list for PBXNativeTarget "CGContextRefDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +548,7 @@
 				D27F85A21F4FF88600916135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D27F85A31F4FF88600916135 /* Build configuration list for PBXNativeTarget "CGContextRefDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +557,7 @@
 				D27F85A51F4FF88600916135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
