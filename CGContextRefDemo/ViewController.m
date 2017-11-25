@@ -20,7 +20,9 @@
 
 
 
-
+/*
+ *   基于CoreGraphics框架的Quartz2D绘图
+ */
 @implementation ViewController
 {
     WaveView *_wave;
