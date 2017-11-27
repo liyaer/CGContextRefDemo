@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D23DDA331FC96E8F003FEF35 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = D23DDA321FC96E8F003FEF35 /* BezierPathView.m */; };
 		D25557591F91B1A30039A7F5 /* CircleCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = D25557581F91B1A30039A7F5 /* CircleCountDown.m */; };
 		D25557611F920BB20039A7F5 /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D25557601F920BB20039A7F5 /* WaveView.m */; };
 		D27F85751F4FF88600916135 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D27F85741F4FF88600916135 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D23DDA311FC96E8F003FEF35 /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		D23DDA321FC96E8F003FEF35 /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
 		D25557571F91B1A30039A7F5 /* CircleCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCountDown.h; sourceTree = "<group>"; };
 		D25557581F91B1A30039A7F5 /* CircleCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCountDown.m; sourceTree = "<group>"; };
 		D255575F1F920BB20039A7F5 /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
@@ -89,11 +92,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D25557551F91B1720039A7F5 /* 静态绘制 */ = {
+		D23DDA2F1FC96E43003FEF35 /* CGContextRef绘制 */ = {
 			isa = PBXGroup;
 			children = (
 				D27F85A61F4FF8AC00916135 /* CustomView.h */,
 				D27F85A71F4FF8AC00916135 /* CustomView.m */,
+			);
+			name = "CGContextRef绘制";
+			sourceTree = "<group>";
+		};
+		D23DDA301FC96E62003FEF35 /* UIBezierPath绘制 */ = {
+			isa = PBXGroup;
+			children = (
+				D23DDA311FC96E8F003FEF35 /* BezierPathView.h */,
+				D23DDA321FC96E8F003FEF35 /* BezierPathView.m */,
+			);
+			name = "UIBezierPath绘制";
+			sourceTree = "<group>";
+		};
+		D25557551F91B1720039A7F5 /* 静态绘制 */ = {
+			isa = PBXGroup;
+			children = (
+				D23DDA2F1FC96E43003FEF35 /* CGContextRef绘制 */,
+				D23DDA301FC96E62003FEF35 /* UIBezierPath绘制 */,
 			);
 			name = "静态绘制";
 			sourceTree = "<group>";
@@ -329,6 +350,7 @@
 				D27F85781F4FF88600916135 /* AppDelegate.m in Sources */,
 				D27F85751F4FF88600916135 /* main.m in Sources */,
 				D25557591F91B1A30039A7F5 /* CircleCountDown.m in Sources */,
+				D23DDA331FC96E8F003FEF35 /* BezierPathView.m in Sources */,
 				D25557611F920BB20039A7F5 /* WaveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

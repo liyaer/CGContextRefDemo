@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomView.h"
+#import "BezierPathView.h"
 #import "CircleCountDown.h"
 #import "WaveView.h"
 
@@ -16,13 +17,16 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSTimer       *timer;
+@property (nonatomic, strong) NSArray       *animationTypes;
+@property (nonatomic, assign) NSUInteger    index;
+@property (nonatomic, strong) BezierPathView *pathView;
+
 @end
 
 
 
-/*
- *   基于CoreGraphics框架的Quartz2D绘图
- */
+
 @implementation ViewController
 {
     WaveView *_wave;
@@ -36,11 +40,14 @@
     /*
      *   静态绘制
      */
-    CustomView *customView = [[CustomView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:customView];
+//    CustomView *customView = [[CustomView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];//基于CGContextRef的绘制
+//    [self.view addSubview:customView];
+    
+    [self testBezierPath];//基于UIBezierPath的绘制
+
     
     /*
-     *   动态绘制
+     *   动态绘制（都是基于CGContextRef的绘制）
      */
     //圆形进度条
     CircleCountDown *cView = [[CircleCountDown alloc] initWithFrame:CGRectMake(self.view.frame.size.width -100, self.view.frame.size.height -100, 100, 100)];
@@ -49,6 +56,49 @@
     
     //双曲线进度条
     [self doubleCurve];
+}
+
+- (void)testBezierPath
+{
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    BezierPathView *v = [[BezierPathView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, height - 140 - 64)];
+    [self.view addSubview:v];
+    v.layer.borderColor = [UIColor redColor].CGColor;
+    v.layer.borderWidth = 5;
+    v.backgroundColor = [UIColor whiteColor];
+    
+    v.type = kDefaultPath;
+    self.index = 0;
+    
+    self.animationTypes = @[@(kDefaultPath),
+                            @(kRectPath),
+                            @(kCirclePath),
+                            @(kOvalPath),
+                            @(kRoundedRectPath),
+                            @(kArcPath),
+                            @(kSecondBezierPath)];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                  target:self
+                                                selector:@selector(updateType)
+                                                userInfo:nil
+                                                 repeats:YES];
+    
+    self.view.layer.borderWidth = 1;
+    self.view.layer.borderColor = [UIColor blueColor].CGColor;
+    self.pathView = v;
+}
+
+- (void)updateType
+{
+    if (self.index + 1 < self.animationTypes.count) {
+        self.index ++;
+    } else {
+        self.index = 0;
+    }
+    
+    self.pathView.type = [[self.animationTypes objectAtIndex:self.index] intValue];
+    [self.pathView setNeedsDisplay];
 }
 
 -(void)doubleCurve
